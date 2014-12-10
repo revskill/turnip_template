@@ -1,6 +1,12 @@
 #encoding: utf-8
 #language: vi
 Tính năng: Đăng kí người dùng	
+	Tình huống: Người dùng không gõ email
+	    Khi vào trang chủ
+	    Và đi vào trang đăng kí
+	    Và nhấn nút Đăng ký
+	    Thì hiển thị thông báo "Vui lòng nhập trường email"
+
 	Tình huống: Người dùng gõ đúng các trường và là người dùng mới
 		Khi vào trang chủ
 		Và đi vào trang đăng kí
@@ -17,7 +23,7 @@ Tính năng: Đăng kí người dùng
 		Biết đã tồn tại người dùng với email "test1@brycen.com.vn"
 		Khi vào trang chủ
 		Và đi vào trang đăng kí
-		Và nhập email test1@brycen.com.vn, mật khẩu và xác nhận mật khẩu nhập đúng
+		Và nhập email "test1@brycen.com.vn", mật khẩu và xác nhận mật khẩu nhập đúng
 		Và nhấn nút Đăng ký
 		Thì hiển thị thông báo "Email đã tồn tại"
 

@@ -22,6 +22,10 @@ step 'nhấn nút Đăng ký' do
 	click_button 'Đăng ký'
 end
 
+step 'hiển thị thông báo "Vui lòng nhập trường email"' do 
+	expect(page).to have_content "Vui lòng nhập trường email"
+end
+
 step 'chuyển đến trang chủ với nội dung "kích hoạt email"' do 
 	expect(page).to have_content 'kích hoạt email'
 end
@@ -56,7 +60,7 @@ step 'đã tồn tại người dùng với email "test1@brycen.com.vn"' do
 	User.create(email: 'test1@brycen.com.vn', password: '1234567', password_confirmation: '1234567')
 end
 
-step 'nhập email test1@brycen.com.vn, mật khẩu và xác nhận mật khẩu nhập đúng' do 
+step 'nhập email "test1@brycen.com.vn", mật khẩu và xác nhận mật khẩu nhập đúng' do 
 	fill_in :user_email, :with => 'test1@brycen.com.vn'
 	fill_in :user_password, :with => '1234567'
 	fill_in :user_password_confirmation, :with => '1234567'
