@@ -21,5 +21,6 @@ module Demoservice
     # config.i18n.default_locale = :de
     config.autoload_paths += %W( #{Rails.root}/app/services )
     config.active_record.observers = :user_observer
+    config.action_mailer.default_url_options = { :host => "test.com" }
   end
 end

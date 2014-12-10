@@ -1,3 +1,4 @@
+=begin
 ActionMailer::Base.smtp_settings = {
   :delivery_method      => :smtp,
   :raise_delivery_errors=> false,
@@ -5,3 +6,4 @@ ActionMailer::Base.smtp_settings = {
   :port                 => 25,
   :domain               => "test.com"
 }
+=end
