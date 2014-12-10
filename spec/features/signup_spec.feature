@@ -24,6 +24,6 @@ Tính năng: Đăng kí người dùng
 	Tình huống: Người dùng gõ mật khẩu quá ngắn (dưới 6 ký tự)
 		Khi vào trang chủ
 		Và đi vào trang đăng kí
-		Và nhập email, mật khẩu '12345'
+		Và nhập email, mật khẩu "12345"
 		Và nhấn nút Đăng ký
 		Thì hiển thị thông báo "Mật khẩu quá ngắn"

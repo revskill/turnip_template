@@ -65,3 +65,14 @@ end
 step 'hiển thị thông báo "Email đã tồn tại"' do 
 	expect(page).to have_content "Email đã tồn tại"
 end
+
+# password is too short
+step 'nhập email, mật khẩu "12345"' do
+	fill_in :user_email, :with => 'test1@brycen.com.vn'
+	fill_in :user_password, :with => '12345'
+	fill_in :user_password_confirmation, :with => '12345'
+end
+
+step 'hiển thị thông báo "Mật khẩu quá ngắn"' do 
+	expect(page).to have_content "Mật khẩu quá ngắn"
+end
