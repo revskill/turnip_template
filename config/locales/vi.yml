@@ -10,6 +10,7 @@ vi:
           attributes:
             email:
               blank: 'Vui lòng nhập email'
+              taken: 'Email đã tồn tại'
   mailer:
     account:
       confirmation_title: 'Xác thực tài khoản'

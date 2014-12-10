@@ -51,3 +51,17 @@ end
 step 'người dùng sẽ thấy dòng chữ "Xác nhận tài khoản thành công"' do 
 	expect(page).to have_content "Xác nhận tài khoản thành công"
 end
+
+step 'đã tồn tại người dùng với email "test1@brycen.com.vn"' do
+	User.create(email: 'test1@brycen.com.vn', password: '1234567', password_confirmation: '1234567')
+end
+
+step 'nhập email test1@brycen.com.vn, mật khẩu và xác nhận mật khẩu nhập đúng' do 
+	fill_in :user_email, :with => 'test1@brycen.com.vn'
+	fill_in :user_password, :with => '1234567'
+	fill_in :user_password_confirmation, :with => '1234567'
+end
+
+step 'hiển thị thông báo "Email đã tồn tại"' do 
+	expect(page).to have_content "Email đã tồn tại"
+end
