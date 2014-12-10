@@ -76,3 +76,13 @@ end
 step 'hiển thị thông báo "Mật khẩu quá ngắn"' do 
 	expect(page).to have_content "Mật khẩu quá ngắn"
 end
+
+# password_confirmation is not equal to original password
+step 'nhập email, mật khẩu "123456", xác nhận mật khẩu "12345"' do 
+	fill_in :user_email, :with => 'test1@brycen.com.vn'
+	fill_in :user_password, :with => '123456'
+	fill_in :user_password_confirmation, :with => '12345'
+end
+step 'hiển thị thông báo "Mật khẩu xác nhận không trùng mật khẩu ban đầu"' do 
+	expect(page).to have_content "Mật khẩu xác nhận không trùng mật khẩu ban đầu"
+end

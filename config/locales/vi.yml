@@ -11,6 +11,10 @@ vi:
             email:
               blank: 'Vui lòng nhập email'
               taken: 'Email đã tồn tại'
+            password:
+              too_short: 'Mật khẩu quá ngắn'
+            password_confirmation:
+              confirmation: 'Mật khẩu xác nhận không trùng mật khẩu ban đầu'
   mailer:
     account:
       confirmation_title: 'Xác thực tài khoản'

@@ -27,3 +27,10 @@ Tính năng: Đăng kí người dùng
 		Và nhập email, mật khẩu "12345"
 		Và nhấn nút Đăng ký
 		Thì hiển thị thông báo "Mật khẩu quá ngắn"
+
+	Tình huống: Người dùng gõ xác nhận mật khẩu không trùng
+		Khi vào trang chủ
+		Và đi vào trang đăng kí
+		Và nhập email, mật khẩu "123456", xác nhận mật khẩu "12345"
+		Và nhấn nút Đăng ký
+		Thì hiển thị thông báo "Mật khẩu xác nhận không trùng mật khẩu ban đầu"
