@@ -14,3 +14,4 @@ vi:
     account:
       confirmation_title: 'Xác thực tài khoản'
       confirmation_content: 'xác nhận'
+      confirmation_success: 'Xác nhận tài khoản thành công'

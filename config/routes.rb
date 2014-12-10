@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"
+  get "confirmation/:activation_code" => "users#confirmation" , :as => "confirmation"
   root :to => "users#index"
   resources :sessions
 

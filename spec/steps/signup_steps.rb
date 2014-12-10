@@ -45,9 +45,9 @@ step 'người dùng sẽ thấy chữ "xác nhận" trong nội dung email' do
 end
 
 step 'người dùng nhấn vào đường dẫn đầu tiên trong email' do 
-#	click_first_link_in_email
+	click_first_link_in_email
 end
 
 step 'người dùng sẽ thấy dòng chữ "Xác nhận tài khoản thành công"' do 
-
+	expect(page).to have_content "Xác nhận tài khoản thành công"
 end

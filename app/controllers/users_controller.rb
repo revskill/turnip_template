@@ -7,6 +7,15 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def confirmation
+    @user = User.where(activation_code: params[:activation_code]).first
+    if @user and @user.activated != true
+      @user.activated = true
+      @user.save
+      flash[:success] = I18n.t('mailer.account.confirmation_success')
+      redirect_to root_path
+    end
+  end
   # GET /users/1
   # GET /users/1.json
   def show
@@ -25,7 +34,7 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-
+    @user.activation_code = "abcde"
     respond_to do |format|
       if @user.save
         format.html {

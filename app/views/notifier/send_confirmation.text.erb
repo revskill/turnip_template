@@ -1,1 +1,2 @@
-<%= t('mailer.account.confirmation_content') %>
+<%= link_to t('mailer.account.confirmation_content'), :controller => "users", :action => "confirmation",
+:only_path => false, :activation_code => @code, :host => "test.com" %>
