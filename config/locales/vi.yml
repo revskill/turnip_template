@@ -2,4 +2,15 @@ vi:
   user:
     sign_up: "Đăng ký"
     flash:
-      success: 'Bạn đã đăng ký thành công. Vui lòng đăng nhập'
+      success: 'Vui lòng kích hoạt email'
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: 'Vui lòng nhập email'
+  mailer:
+    account:
+      confirmation_title: 'Xác thực tài khoản'
+      confirmation_content: 'xác nhận'

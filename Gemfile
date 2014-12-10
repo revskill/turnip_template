@@ -47,5 +47,7 @@ group :test do
 	gem 'poltergeist'
 	gem 'spork'
 	gem 'spork-rails'
+	gem 'email_spec'
 end
 
+gem 'rails-observers'
